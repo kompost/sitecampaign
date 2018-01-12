@@ -1,3 +1,4 @@
+//  a 0 prefix so numbers less than 10 also are printed with 2 digits e.g. "07"
 function prefixZero(value) {
     if (value > 9) {
         return value;
@@ -6,18 +7,14 @@ function prefixZero(value) {
     }
 }
 
-var x;
-var countdownDate;
+var x; // variable to hold setInterval
 
+var countdownDate; // outer scope timestamp to keep time precise
 function displayCountdown(expiration){
     countdownDate = expiration;
     x = setInterval(function() {
 
-        // Get todays date and time
-        //var now = new Date().getTime();
-
         // Find the distance between now an the count down date
-
         distance = countdownDate - new Date().getTime();
 
         // Time calculations for days, hours, minutes and seconds
@@ -29,6 +26,7 @@ function displayCountdown(expiration){
 
 
         // Output the result in an element with id="countdown"
+        // straight injection into HTML, since the function is only used once
         document.getElementById("countdown").innerHTML = prefixZero(days) + " : " + prefixZero(hours) + " : "
         + prefixZero(minutes) + " : " + prefixZero(seconds) + "";
     }, 1000);

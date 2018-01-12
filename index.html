@@ -346,19 +346,19 @@
 			var lastVisited = readCookie('lastVisited');
 			var visited = readCookie('visited');
 
-			console.log("last visited: " + lastVisited.toString());
-			console.log("visited: " + visited);
+			//console.log("last visited: " + lastVisited.toString()); //testing purposes
+			//console.log("visited: " + visited);
 
 			var saleLength = 8 * 24 * 60 * 60 * 1000 //in miliseconds
 			if(visited == null || false){
-				createCookie('salesExpiration', now + saleLength, 8);
-				createCookie('visited', 'true', 8);
+				createCookie('salesExpiration', now + saleLength, 8); //set campaign to expire in 8 days
+				createCookie('visited', 'true', 8); //this cookie checks whether a customer has already gotten a campaign
 			}
 			var salesExpiration = readCookie('salesExpiration');
 
 			oneDayInMS = 24 * 60 * 60 * 1000;
-			var cta = readCookie('CTA');
-			console.log("Call to action avtivated: " + cta);
+			var cta = readCookie('CTA'); // Click-To-Action flag
+			//console.log("Call to action avtivated: " + cta);
 			if(cta == null){
 				displayCountdown(salesExpiration);
 				$(window).on('load',function(){
@@ -370,12 +370,12 @@
 
 
 			$('#CTA').on('click',function(){
-				createCookie('CTA', now, 1);
+				createCookie('CTA', now, 1); //cookie expires after 1 day, and then the campaign is shown again
 				$('#scModal').modal('hide');
 			});
 	</script>
 
-
+	<!-- Using bootstrap modal component -->
 	<div class="modal fade" id="scModal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
