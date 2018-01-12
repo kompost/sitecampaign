@@ -1,3 +1,5 @@
+FINAL SOLUTION: http://htmlpreview.github.io/?https://github.com/kompost/sitecampaign/blob/master/index.html
+
 # SiteCampaign template task
 
 The idea behind this task is to have assess your work as a front-end coder.
@@ -8,7 +10,7 @@ This kind of task is what drives the company, and while we use an internal libra
 ## What is a SiteCampaign?
 
 - A **SiteCampaign**  is a pop-up or overlay that is shown on our clients' websites. Campaign examples include an Abandoned Basket (shown when a customer tries to leave the website before completing a purchase), Traffic Shaper (an overlay that directs traffic from one area of the site to another), Product Recommendation Slider (a carousel featuring recommended products), Lead Generation (gathering newsletter sign-ups), etc...
-- For this task we would like you to create an example Campaign, that we will from now on refer to as the Campaign. 
+- For this task we would like you to create an example Campaign, that we will from now on refer to as the Campaign.
 
 ## What to do?
 
