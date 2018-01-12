@@ -6,6 +6,7 @@
     width: 700px;
 }
 
+
 .row1 {
   height: 25%;
   text-align: center;
@@ -38,6 +39,7 @@
 
 #CTA {
   border: solid;
+  cursor: pointer;
   padding: 15px;
 }
 
