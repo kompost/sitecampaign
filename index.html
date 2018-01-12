@@ -352,7 +352,7 @@
 			var saleLength = 8 * 24 * 60 * 60 * 1000 //in miliseconds
 			if(visited == null || false){
 				createCookie('salesExpiration', now + saleLength, 8);
-				createCookie('visited', true, 8);
+				createCookie('visited', 'true', 8);
 			}
 			var salesExpiration = readCookie('salesExpiration');
 
